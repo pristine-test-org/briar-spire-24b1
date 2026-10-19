@@ -1,5 +1,5 @@
 import "./style.css";
-import { type Role, roleLabel, roleOf, supabase } from "./supabase";
+import { type Role, roleOf, supabase } from "./supabase";
 
 // /login, /admin and /manager: each signs in one role, then goes to the landing page.
 const pageRole = document.body.dataset.role as Role;
@@ -28,7 +28,7 @@ form.addEventListener("submit", async (event) => {
   if (signInError) return fail(signInError.message === "Invalid login credentials" ? "Wrong email or password." : signInError.message);
   if (roleOf(data.user) !== pageRole) {
     await supabase.auth.signOut();
-    return fail(`That isn't a ${roleLabel[pageRole].toLowerCase()} account.`);
+    return fail(`That isn't ${pageRole === "admin" ? "an" : "a"} ${pageRole} account.`);
   }
   location.replace("/");
 });
