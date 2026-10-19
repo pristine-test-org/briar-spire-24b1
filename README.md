@@ -1,8 +1,5 @@
 # Briar Spire: Landing page · Vercel (sign-in)
 
-> **This is a template, not a repository.** Copy it out and prepare it before an eval (steps below).
-> Nothing here is deployed.
-
 The `landing-vercel` page on **Vercel**, with preview links **public**, but the whole page sits
 **behind a sign-in**: every page sends a signed-out visitor to a login page. Static Vite +
 TypeScript, no framework, signing in through Supabase Auth. After signing in, the page reads a
@@ -11,11 +8,9 @@ matrix: impeccable-reviews#302.
 
 ## Deployment links
 
-Filled in at prep time.
-
 | Production | Preview gate |
 |---|---|
-| _not deployed_ | no (the site's own sign-in) |
+| https://briar-spire-24b1.vercel.app | no (the site's own sign-in) |
 
 ## Routes
 
